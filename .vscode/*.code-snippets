@@ -1,0 +1,15 @@
+{
+  "Breakpoints": {
+    "prefix": ["breakpoint","bootstrap"],
+    "body": "@include media-breakpoint-down(md) {}",
+    "description": "Adds breakpoints...",
+    "scope": "css,scss"
+  },
+  "Media": {
+    "prefix": ["media"],
+    "body": " @media screen and (min-width: 900px) {}",
+    "description": "Adds bmedia rule...",
+    "scope": "css,scss"
+  }
+ 
+}
