@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
 import PhotoSlider from "./react-photo-slider";
+import test from "my-component";
 
 class App extends Component {
   state = { activePhoto: 0 };
@@ -17,6 +18,9 @@ class App extends Component {
         {index + 1}
       </button>
     ));
+
+    console.log(test);
+
     return (
       <Fragment>
         <section class="hero is-info is-fullheight">
