@@ -8,13 +8,14 @@ class photoSlider extends Component {
     super();
     this.state = { currentPhoto: 0 };
     this.wrapper = React.createRef();
+    this.container = React.createRef();
   }
 
   previousPhoto() {
     this.setState({ currentPhoto: this.state.currentPhoto - 1 });
     this.wrapper.current.scrollBy({
       top: 0,
-      left: window.innerWidth * -1,
+      left: this.container.current.clientWidth * -1,
       behavior: "smooth"
     });
   }
@@ -23,7 +24,7 @@ class photoSlider extends Component {
     this.setState({ currentPhoto: this.state.currentPhoto + 1 });
     this.wrapper.current.scrollBy({
       top: 0,
-      left: window.innerWidth,
+      left: this.container.current.clientWidth,
       behavior: "smooth"
     });
   }
@@ -32,7 +33,7 @@ class photoSlider extends Component {
     this.setState({ currentPhoto: index });
     this.wrapper.current.scroll({
       top: 0,
-      left: window.innerWidth * index,
+      left: this.container.current.clientWidth * index,
       behavior: "smooth"
     });
   }
@@ -48,25 +49,17 @@ class photoSlider extends Component {
       <img src={data} className="slider__image" key={index} />
     ));
 
-    return (
-      <div className="slider__container" style={this.props.style}>
+    return <div className="slider__container" style={this.props.style} ref={this.container}>
         <div className="slider__wrapper" ref={this.wrapper}>
           <div className="slider__images">{photos}</div>
         </div>
-        <button
-          className="slider__button--left"
-          onClick={this.previousPhoto.bind(this)}
-        >
+        <button className="slider__button--left" onClick={this.previousPhoto.bind(this)}>
           <img src={Arrow} alt="arrow pointing to the left" />
         </button>
-        <button
-          className="slider__button--right"
-          onClick={this.nextPhoto.bind(this)}
-        >
+        <button className="slider__button--right" onClick={this.nextPhoto.bind(this)}>
           <img src={Arrow} alt="arrow pointing to the right" />
         </button>
-      </div>
-    );
+      </div>;
   }
 }
 

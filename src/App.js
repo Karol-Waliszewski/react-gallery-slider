@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from "react";
 import PhotoSlider from "./react-photo-slider";
-import test from "my-component";
 
 class App extends Component {
   state = { activePhoto: 0 };
@@ -12,14 +11,11 @@ class App extends Component {
   render() {
     let buttons = [1, 2, 3].map((data, index) => (
       <button
-        className="slider__dot"
         onClick={this.setActive.bind(this, index)}
       >
         {index + 1}
       </button>
     ));
-
-    console.log(test);
 
     return (
       <Fragment>
