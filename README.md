@@ -20,13 +20,12 @@ yarn add react-gallery-slider
 ## Getting Started :bulb:
 
 ```js
-const React = require('react')
-const ReactDOM = require('react-dom')
-const GallerySlider = require('react-gallery-slider')
+const React = require('react');
+const ReactDOM = require('react-dom');
+const GallerySlider = require('react-gallery-slider');
 
 const Photo = require("./img.jpg");
-
-const photos = ["some url", Photo]
+var photos = ["some url", Photo];
 
 ReactDOM.render(
   <GallerySlider photos={photos} />,
@@ -42,7 +41,7 @@ import ReactDOM from 'react-dom';
 import PhotoSlider from "./react-photo-slider";
 
 import Photo from "./img.jpg";
-const photos = ["some url", Photo]
+var photos = ["some url", Photo];
 
 ReactDOM.render(
   <GallerySlider photos={photos} />,
@@ -52,11 +51,12 @@ ReactDOM.render(
 
 ### Options :hammer:
 
-* `photos` - _array_ Array of photos' urls (**required**)
-* `activePhoto` - _number_ Index (starting from 0) of the current photo. 
-* `className` - _string_ Class name of the container element.
-* `style` - _object_ Inline styles of the gallery container.
+* `photos` - _(array)_ Array of photos' urls (**required**)
+* `activePhoto` - _(number)_ Index (starting from 0) of the current photo. 
+* `className` - _(string)_ Class name of the container element.
+* `style` - _(object)_ Inline styles of the gallery container.
 
 ### License :page_facing_up:
+[MIT](https://opensource.org/licenses/MIT)
 
-MIT © [Espen Hovlandsdal](https://espen.codes/)
+Made by [Karol Waliszewski](http://karol-waliszewski.github.io/) with :heart:
