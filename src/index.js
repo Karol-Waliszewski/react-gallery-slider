@@ -49,17 +49,19 @@ class photoSlider extends Component {
             <img src={data} className="slider__image" key={index} />
         ));
 
-        return <div className="slider__container" style={this.props.style} ref={this.container}>
+        let customClasses = this.props.className | "";
+
+        return <div className={`slider__container ${customClasses}`} style={this.props.style} ref={this.container}>
             <div className="slider__wrapper" ref={this.wrapper}>
-                <div className="slider__images">{photos}</div>
+              <div className="slider__images">{photos}</div>
             </div>
             <button className="slider__button--left" onClick={this.previousPhoto.bind(this)}>
-                <img src={Arrow} alt="arrow pointing to the left" />
+              <img src={Arrow} alt="arrow pointing to the left" />
             </button>
             <button className="slider__button--right" onClick={this.nextPhoto.bind(this)}>
-                <img src={Arrow} alt="arrow pointing to the right" />
+              <img src={Arrow} alt="arrow pointing to the right" />
             </button>
-        </div>;
+          </div>;
     }
 }
 

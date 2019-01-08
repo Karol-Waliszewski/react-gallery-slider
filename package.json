@@ -1,14 +1,14 @@
 {
-  "name": "react-photo-slider",
+  "name": "react-gallery-slider",
   "version": "1.0.0",
   "description": "React photos slider made mainly by css snap-scroll property",
   "author": {
-    "name": "karol-waliszewski"
+    "name": "karol-waliszewski",
+    "url": "http://karol-waliszewski.github.io/"
   },
+  "homepage": "https://github.com/Karol-Waliszewski/react-gallery-slider",
+  "license": "MIT",
   "main": "build/index.js",
-  "publishConfig": {
-    "access": "restricted"
-  },
   "scripts": {
     "start": "webpack --watch",
     "build": "webpack"
@@ -32,6 +32,8 @@
     "svg-inline-loader": "^0.8.0",
     "url-loader": "^1.1.2",
     "webpack": "^4.28.3",
-    "webpack-cli": "^3.0.4"
+    "webpack-cli": "^3.0.4",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
   }
 }
